@@ -981,6 +981,7 @@ void LCD_DrawMonoPict(const uint32_t *Pict)
       {
         *(__IO uint16_t*)(CurrentFrameBuffer) = CurrentTextColor;
       }
+      CurrentFrameBuffer++;
     }
   }
 }
