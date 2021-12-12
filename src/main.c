@@ -35,8 +35,9 @@ typedef enum{
 
 }SnakeDirection;
 
-
-
+//NOTE: Creating the test.c file from test.bmp is done with this command:
+// xxd -i test.bmp > src/test.c
+extern unsigned char test_bmp[];
 
 volatile int32_t SysTickCnt=0;
 volatile int cnt = 0;
@@ -634,6 +635,7 @@ void HubSetup(){
 		//LCD_DrawRect(30, 200, 150, 150);
 					//PICTURE?
 
+		LCD_WriteBMP(test_bmp);
 
 
 		LCD_SetColors(LCD_COLOR_WHITE, LCD_COLOR_BLACK);
